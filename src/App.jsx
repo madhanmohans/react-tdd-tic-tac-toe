@@ -3,7 +3,7 @@ export default function App() {
     <div>
       <div>
         <div data-testid = "gameBoard">
-          Tic Tac Toe
+          X
         </div>
       </div>
     </div>
