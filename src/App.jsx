@@ -3,7 +3,7 @@ export default function App() {
     <div className="bg-gray-900 text-gray-200 h-screen">
       <div className="container mx-auto">
         <div data-testid = "gameBoard" className="flex justify-center items-center h-screen">
-          X
+          <button>X</button>
         </div>
       </div>
     </div>
