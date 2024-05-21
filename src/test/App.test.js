@@ -6,5 +6,6 @@ describe("App", () => {
         render(<App />);
         const gameBoard = screen.getByTestId("gameBoard");
         expect(gameBoard).not.toBeNull();
+        expect(gameBoard.textContent).toBe("X")
     });
 });
