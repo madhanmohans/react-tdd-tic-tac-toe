@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "../App";
 
 describe("App", () => {
@@ -18,4 +18,10 @@ describe("App", () => {
         const buttons = screen.getAllByRole("button");
         expect(buttons.length).toEqual(9);
     });
+    it("should be able to click the button", () => {
+        render(<App />);
+        const button = screen.getAllByRole("button")[0];
+        fireEvent.click(button);
+        expect(button.textContent).toBe("1");
+    })
 });
