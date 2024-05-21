@@ -8,4 +8,9 @@ describe("App", () => {
         expect(gameBoard).not.toBeNull();
         expect(gameBoard.textContent).toBe("X")
     });
+    it("should render a button", () => {
+        render(<App />);
+        const button = screen.getByRole("button");
+        expect(button).not.toBeNull();
+    })
 });
