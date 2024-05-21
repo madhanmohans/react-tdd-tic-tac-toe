@@ -22,6 +22,12 @@ describe("App", () => {
         render(<App />);
         const button = screen.getAllByRole("button")[0];
         fireEvent.click(button);
-        expect(button.textContent).toBe("1");
+        expect(button.textContent).toBe("X");
+    });
+    it("should render X on the square once clicked", () => {
+        render(<App />);
+        const button = screen.getAllByRole("button")[0];
+        fireEvent.click(button);
+        expect(button.textContent).toBe("X");
     })
 });
