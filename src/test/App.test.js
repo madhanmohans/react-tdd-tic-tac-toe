@@ -12,5 +12,10 @@ describe("App", () => {
         render(<App />);
         const button = screen.getByRole("button");
         expect(button).not.toBeNull();
-    })
+    });
+    it("should render 9 buttons", () => {
+        render(<App />);
+        const buttons = screen.getAllByRole("button");
+        expect(buttons.length).toBe(9);
+    });
 });
