@@ -38,4 +38,9 @@ describe("App", () => {
         fireEvent.click(square[1]);
         expect(square[1].textContent).toBe("O");
     });
+    it("should reset the board", () => {
+        render(<App />);
+        const reset = screen.getByTestId("reset");
+        expect(reset).not.toBeNull();
+    })
 });
