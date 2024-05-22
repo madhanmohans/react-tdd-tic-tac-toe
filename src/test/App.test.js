@@ -29,5 +29,13 @@ describe("App", () => {
         const button = screen.getAllByRole("button")[0];
         fireEvent.click(button);
         expect(button.textContent).toBe("X");
-    })
+    });
+    it("should render O on the second move", () => {
+        render(<App />);
+        const square = screen.getAllByRole("button");
+        fireEvent.click(square[0]);
+        expect(square[0].textContent).toBe("X");
+        fireEvent.click(square[1]);
+        expect(square[1].textContent).toBe("O");
+    });
 });
