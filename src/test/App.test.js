@@ -46,12 +46,12 @@ describe("App", () => {
     it("should be able to calculate winner", () => {
         render(<App />);
         const squares = screen.getAllByRole("button");
-        const status = screen.getByTestId("status");
+        const winnerStatus = screen.getByTestId("status");
         fireEvent.click(squares[0]); // X
         fireEvent.click(squares[1]); // O
         fireEvent.click(squares[3]); // X
         fireEvent.click(squares[4]); // O
         fireEvent.click(squares[6]); // X
-        expect(status.textContent).toBe("Winner is X")
+        expect(winnerStatus.textContent).toBe("Winner is X")
     })
 });
